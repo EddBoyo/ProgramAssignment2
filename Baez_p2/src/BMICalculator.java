@@ -24,6 +24,8 @@ public class BMICalculator {
 			}
 			System.out.println("Enter your height (in inches):");
 			height = scan.nextDouble();
+			// both height checks ensure don't divide by 0 
+			// all checks make sure no negatives entered
 			if (height <= 0)
 			{
 				System.out.println("Invalid height");

@@ -7,6 +7,9 @@ public class decrypt {
 		System.out.println("Enter your four digit encrypted number:");
 		int userInput = scan.nextInt();
 		// checks if input is four digits
+		// wanted to also check for less than 4 digit but if the 1st digit in the decrypt 
+		// is supposed to be zero then I wasn't sure the best way to check so I just hope
+		// inputs are truthful
 		if (userInput / 1000 >= 10)
 		{
 			System.out.println("Incorrect number of digit input");
@@ -20,6 +23,8 @@ public class decrypt {
 		int firstDigit = (userInput / 1000) % 10;
 		
 		// 1st phase of decryption
+		// + 10 - 7 may seem redundant but done just in case
+		// % 10 for numbers 0 1 2 to not be double digit for + 10 - 7
 		fourthDigit = ((fourthDigit + 10) - 7) % 10;
 		thirdDigit = ((thirdDigit + 10) - 7) % 10;
 		secondDigit = ((secondDigit + 10) - 7) % 10;

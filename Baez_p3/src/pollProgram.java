@@ -88,6 +88,7 @@ public class pollProgram {
 		System.out.println("HIGHEST POINT TOTAL: " + max + " for the topping " + topics[maxIndex]);
 		System.out.println("LOWEST POINT TOTAL: " + min + " for the topping " + topics[minIndex]);
 		
+		scan.close();
 	}
 
 }
